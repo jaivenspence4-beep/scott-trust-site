@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!-- PREVIEW MODE: remove the next line (and robots.txt) once LDA registration is done and the [placeholders] are filled in -->
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Living trusts, deeds into trusts, trust updates and successor trustee help in Amador County. Flat fees, plain English, nothing to sell.">
+<meta name="theme-color" content="#16243a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%2718%27 fill=%27%2316243a%27 stroke=%27%23d8aa52%27 stroke-width=%272%27/%3E%3Ctext x=%2720%27 y=%2726%27 text-anchor=%27middle%27 font-family=%27Georgia%27 font-size=%2715%27 fill=%27%23d8aa52%27%3EAS%3C/text%3E%3C/svg%3E">
+<title>Scott Trust &amp; Document Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a full single-file business site (works with no scripts, so it also opens as an email attachment).
+   Navy masthead with seal; sticky section nav; service ledger; trust-funding self-check; process; attorney services; comparison; resources; about; FAQ; contact; LDA disclosure footer. */
+:root{
+  --bg:#f6f7f5; --surface:#ffffff; --sunk:#eceee9; --line:#d9ddd5;
+  --ink:#16243a; --muted:#5a6676; --band:#16243a; --band-ink:#eef1f4;
+  --accent:#2c6e5d; --accent-ink:#ffffff; --seal:#a77a22; --seal-soft:#f3e8cf;
+  --f-display:"Young Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Public Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1520; --surface:#171f2c; --sunk:#111823; --line:#273244;
+  --ink:#e8ecf1; --muted:#a3adba; --band:#0a0f17; --band-ink:#e8ecf1;
+  --accent:#5fb39b; --accent-ink:#0c1a16; --seal:#d8aa52; --seal-soft:#3a2f18; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1520; --surface:#171f2c; --sunk:#111823; --line:#273244;
+  --ink:#e8ecf1; --muted:#a3adba; --band:#0a0f17; --band-ink:#e8ecf1;
+  --accent:#5fb39b; --accent-ink:#0c1a16; --seal:#d8aa52; --seal-soft:#3a2f18; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;line-height:1.15;margin:0}
+p,ul,ol{margin:0}
+a{color:var(--accent)}
+.w{max-width:920px;margin:0 auto;padding-inline:20px}
+.draft{background:var(--seal);color:#1a1205;font:600 .82rem var(--f-body);text-align:center;padding:8px 16px}
+.band{background:var(--band);color:var(--band-ink)}
+.hero{padding-block:44px 54px;display:flex;flex-direction:column;gap:18px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo b{font-family:var(--f-display);font-weight:400;font-size:1.1rem}
+.hero h1{font-size:clamp(2.1rem,6.5vw,3.4rem);max-width:15ch}
+.hero p{max-width:56ch;color:color-mix(in srgb,var(--band-ink) 80%,transparent);font-size:1.08rem}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;border:1.5px solid var(--accent);background:var(--accent);color:var(--accent-ink)}
+.btn.alt{background:transparent;color:var(--band-ink);border-color:color-mix(in srgb,var(--band-ink) 40%,transparent)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;font:500 .8rem var(--f-mono);letter-spacing:.04em;color:var(--seal);text-transform:uppercase}
+nav.sec{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.sec .w{display:flex;gap:18px;overflow-x:auto;padding-block:10px;scrollbar-width:none;white-space:nowrap}
+nav.sec .w::-webkit-scrollbar{display:none}
+nav.sec a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.88rem}
+nav.sec a:hover{color:var(--ink)}
+section{padding-block:52px;display:flex;flex-direction:column;gap:22px;scroll-margin-top:50px}
+section+section{border-top:1px solid var(--line)}
+h2{font-size:clamp(1.6rem,4.5vw,2.1rem)}
+.eyebrow{font:600 .72rem var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--seal)}
+.lead{color:var(--muted);max-width:62ch}
+.svc{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:20px 0;border-top:1px solid var(--line)}
+.svc:last-child{border-bottom:1px solid var(--line)}
+.svc h3{font-size:1.25rem}
+.svc .price{font:500 1.15rem var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.svc .body{grid-column:1/-1;color:var(--muted);font-size:.96rem;max-width:66ch;display:flex;flex-direction:column;gap:8px}
+.svc ul{padding-left:1.1em}
+.check{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.q{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start}
+.q b{font:500 .9rem var(--f-mono);color:var(--seal);border:1.5px solid var(--seal);width:28px;height:28px;border-radius:50%;display:grid;place-items:center}
+.callout{background:var(--seal-soft);border-radius:10px;padding:14px 16px;font-size:.95rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:22px;counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{display:flex;flex-direction:column;gap:6px;counter-increment:s}
+.steps li::before{content:counter(s);font:500 .9rem var(--f-mono);color:var(--seal);border:1.5px solid var(--seal);width:30px;height:30px;border-radius:50%;display:grid;place-items:center}
+.steps b{font-size:1.02rem}
+.steps span{color:var(--muted);font-size:.95rem}
+.tablewrap{overflow-x:auto}
+table.cmp{border-collapse:collapse;width:100%;min-width:520px;font-size:.93rem}
+table.cmp th,table.cmp td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+table.cmp th{font:600 .75rem var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+table.cmp td.n{font-family:var(--f-mono);white-space:nowrap}
+table.cmp tr.me td{background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.atty{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.atty div{display:flex;flex-direction:column;gap:6px}
+.atty h3{font-size:1.1rem}
+.atty p{color:var(--muted);font-size:.94rem}
+.articles{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+article{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+article h3{font-size:1.15rem}
+article p,article li{font-size:.94rem;color:var(--muted)}
+article ol,article ul{padding-left:1.15em;display:flex;flex-direction:column;gap:4px}
+.about{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start}
+.about p+p{margin-top:12px}
+.area{display:flex;flex-wrap:wrap;gap:8px}
+.area span{background:var(--sunk);border-radius:999px;padding:4px 12px;font-size:.88rem}
+details{border-top:1px solid var(--line);padding:14px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600}
+details p{margin-top:8px;color:var(--muted);max-width:66ch}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.contact div{display:flex;flex-direction:column;gap:4px}
+.contact .k{font:600 .72rem var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.contact .v{font:500 1.05rem var(--f-mono)}
+footer{background:var(--sunk);padding-block:30px;font-size:.86rem;color:var(--muted)}
+footer .w{display:flex;flex-direction:column;gap:10px}
+footer b{color:var(--ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.trustbar{background:var(--surface);border-bottom:1px solid var(--line)}
+.trustbar .w{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px 20px;padding-block:20px}
+.trustbar div{display:flex;flex-direction:column;gap:2px;border-left:2px solid var(--seal);padding-left:10px}
+.trustbar b{font-family:var(--f-display);font-weight:400;font-size:1.05rem}
+.trustbar span{font-size:.8rem;color:var(--muted);line-height:1.4}
+.reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px 30px}
+.reasons div{display:flex;flex-direction:column;gap:6px}
+.reasons h3{font-size:1.15rem}
+.reasons p{color:var(--muted);font-size:.95rem}
+.reasons .proof{font:500 .78rem var(--f-mono);color:var(--seal);letter-spacing:.03em}
+.catches{display:flex;flex-direction:column}
+.catch{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.catch:last-child{border-bottom:1px solid var(--line)}
+.catch .was{font:400 .92rem var(--f-mono);color:var(--muted);text-decoration:line-through;text-decoration-color:var(--seal)}
+.catch .fix{font-size:.94rem}
+.never{display:flex;flex-direction:column;gap:12px;background:var(--band);color:var(--band-ink);border-radius:14px;padding:24px}
+.never h2{color:var(--band-ink)}
+.never ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px}
+.never li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:.98rem}
+.never li::before{content:"\2715";color:#d8aa52;font-family:var(--f-mono)}
+.svc .know{font-size:.86rem;color:var(--accent);font-weight:600}
+@media (max-width:560px){.about{grid-template-columns:1fr}.svc{grid-template-columns:1fr}.catch{grid-template-columns:1fr;gap:4px}}
+</style>
+</head>
+<body>
+<div class="draft">Draft for Amanda to review. Before it goes public, fill in the bracketed items. Family services go live once your LDA registration is done; the attorney section can go live today.</div>
+
+<header class="band">
+  <div class="w hero">
+    <div class="logo">
+      <svg width="42" height="42" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#d8aa52" stroke-width="1.5"/><circle cx="20" cy="20" r="14.5" fill="none" stroke="#d8aa52" stroke-width=".8" stroke-dasharray="1.6 1.6"/><text x="20" y="25.5" text-anchor="middle" font-family="Young Serif, Georgia, serif" font-size="15" fill="#d8aa52">AS</text></svg>
+      <b>Scott Trust &amp; Document Services</b>
+    </div>
+    <h1>Your family's paperwork, done right.</h1>
+    <p>I'm Amanda Scott. I prepare living trusts, deeds and trustee paperwork for families in the foothills. I'm registered and bonded with Amador County, my prices are flat and published, and I have nothing to sell you but careful work.</p>
+    <div class="cta"><a class="btn" href="#contact">Book a free 15-minute call</a><a class="btn alt" href="#services">See flat fees</a></div>
+    <div class="facts"><span>Jackson · Amador County</span><span>Flat fees</span><span>Home visits</span></div>
+  </div>
+</header>
+
+<div class="trustbar"><div class="w">
+  <div><b>Registered</b><span>Legal Document Assistant, County of Amador, No. [____]</span></div>
+  <div><b>Bonded</b><span>$25,000 consumer-protection bond, as state law requires</span></div>
+  <div><b>Written contract</b><span>Every job in writing, before any work starts</span></div>
+  <div><b>24-hour refund</b><span>Change your mind within a day and get every dollar back</span></div>
+  <div><b>Nothing to sell</b><span>No insurance, annuities or investments, ever</span></div>
+</div></div>
+
+<nav class="sec" aria-label="Sections"><div class="w">
+  <a href="#why">Why me</a><a href="#services">Services</a><a href="#details">Accuracy</a><a href="#funded">Is my trust funded?</a><a href="#how">How it works</a><a href="#compare">Cost</a><a href="#attorneys">For attorneys</a><a href="#guides">Guides</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+</div></nav>
+
+<main class="w">
+
+<section id="why">
+  <p class="eyebrow">Why families trust me</p>
+  <h2>You're trusting someone with your home, your savings and your wishes. Here's why that can be me.</h2>
+  <div class="reasons">
+    <div><h3>I've done this work for years</h3><p>I've prepared trusts, amendments, deeds, change-of-ownership forms, health care directives and trustee notices for families all over Northern California, all reviewed by attorneys before signing.</p><p class="proof">In one recent week: 26 finished documents</p></div>
+    <div><h3>The county knows who I am</h3><p>California requires document assistants to register with their county and post a $25,000 bond that protects consumers. My registration number is on every page I give you.</p><p class="proof">Registered · bonded · insured</p></div>
+    <div><h3>I have nothing else to sell</h3><p>Some "free trust" seminars exist to sell annuities, and California regulators have warned about them for years. I don't hold or sell any financial product. My only business is your paperwork.</p><p class="proof">Your plan, not a product</p></div>
+    <div><h3>You see the price first</h3><p>Every fee is printed on this page. You get a written contract before I start, and a full refund if you cancel within 24 hours. Recording fees are passed through at cost.</p><p class="proof">No hourly meter, no surprises</p></div>
+    <div><h3>I know where my job ends</h3><p>I'm not an attorney and won't act like one. When your situation needs legal advice, I'll tell you, and I'll give you names of attorneys I trust.</p><p class="proof">Honest about limits</p></div>
+    <div><h3>I'm your neighbor</h3><p>I live in Amador County. I'll come to your kitchen table, I answer my own phone, and I'll still be here next year when you have a question.</p><p class="proof">Jackson, California</p></div>
+  </div>
+</section>
+
+<section id="services">
+  <p class="eyebrow">Services</p>
+  <h2>Flat fees, no surprises</h2>
+  <p class="lead">You make the choices; I prepare the documents to your specific direction, accurately and on time. Each price below is the whole fee. County recording and filing fees are passed through at cost, with no markup.</p>
+  <div>
+    <div class="svc"><h3>Deed into your trust</h3><span class="price">$300</span>
+      <div class="body"><p>Many families pay for a trust and never move the house into it. When that happens, the home can still go through probate. This fixes it.</p>
+      <ul><li>Grant deed naming your trust, prepared from your current recorded deed</li><li>The county's Preliminary Change of Ownership Report, filled in</li><li>Plain-English recording instructions with the exact fees</li></ul><p class="know">I've prepared these for Sacramento and Placer counties, including the fee exemptions most people miss.</p></div></div>
+    <div class="svc"><h3>Living trust package, single</h3><span class="price">$850</span>
+      <div class="body"><p>Everything one person needs, assembled from your own choices.</p>
+      <ul><li>Revocable living trust and pour-over will</li><li>Durable financial power of attorney</li><li>Advance health care directive</li><li>Signing appointment and a checklist for funding the trust</li></ul><p class="know">Every page explained in plain English before you sign anything.</p></div></div>
+    <div class="svc"><h3>Living trust package, couple</h3><span class="price">$1,250</span>
+      <div class="body"><p>The same complete package for a married couple, prepared together.</p></div></div>
+    <div class="svc"><h3>Trust update or amendment</h3><span class="price">$450</span>
+      <div class="body"><p>Life changes, so trusts need updating. Change a successor trustee or beneficiary, fix a mistake, or update the trust after you move to another state. Includes notice letters to anyone you've removed as trustee.</p><p class="know">I read your existing trust first. Errors in old amendments are more common than you'd think.</p></div></div>
+    <div class="svc"><h3>Successor Trustee Help</h3><span class="price">$1,500</span>
+      <div class="body"><p>For when someone you love has died and you've been named trustee. I prepare the paperwork and give you a clear path:</p>
+      <ul><li>The trustee's notice to heirs and beneficiaries</li><li>The affidavit to clear title to the house</li><li>A full inventory of accounts and property</li><li>A step-by-step checklist and timeline</li></ul><p class="know">You won't have to guess what comes next.</p></div></div>
+    <div class="svc"><h3>Mobile notary</h3><span class="price">$15 / signature</span>
+      <div class="body"><p>Plus travel. I come to your home, a hospital or care facility, or your office. <em>[Available once commissioned.]</em></p></div></div>
+  </div>
+</section>
+
+<section id="details">
+  <p class="eyebrow">Accuracy</p>
+  <h2>I catch the small mistakes that cause big problems</h2>
+  <p class="lead">A wrong digit can get a deed rejected by the recorder. Naming the wrong trustees can confuse a family for months. These are the kinds of errors I've found and fixed in documents I was asked to correct.</p>
+  <div class="catches">
+    <div class="catch"><span class="was">A ZIP code off by one digit</span><span class="fix">Fixed before the notice went out by certified mail, so it reached the right person.</span></div>
+    <div class="catch"><span class="was">A misspelled street name</span><span class="fix">Matched to the official address so the recorder or bank wouldn't reject it.</span></div>
+    <div class="catch"><span class="was">Successor trustees listed as "current trustees"</span><span class="fix">In a living trust, you are the trustee while you're alive. Fixed so the amendment says what the family meant.</span></div>
+    <div class="catch"><span class="was">Percentages that didn't match the plan</span><span class="fix">Rebuilt a 17-beneficiary charity schedule to two decimals so it matched the plan and totaled exactly 100%.</span></div>
+    <div class="catch"><span class="was">A name spelled two different ways</span><span class="fix">Flagged and confirmed with the client so every document names the same person the same way.</span></div>
+  </div>
+</section>
+
+<section id="funded">
+  <p class="eyebrow">Free self-check</p>
+  <h2>Is your trust actually funded?</h2>
+  <p class="lead">A trust only protects what's titled in its name. Grab your paperwork and answer four questions.</p>
+  <div class="check">
+    <div class="q"><b>1</b><p>On your most recent recorded <strong>house deed</strong>, does the owner read like "Jane Doe, Trustee of the Doe Family Trust dated…"? If it just says your name, the house may not be in the trust.</p></div>
+    <div class="q"><b>2</b><p>Are your <strong>bank and brokerage accounts</strong> titled to the trust, or do they have a payable-on-death beneficiary?</p></div>
+    <div class="q"><b>3</b><p>Have you checked the beneficiaries on your <strong>IRAs, 401(k)s and life insurance</strong> in the last three years?</p></div>
+    <div class="q"><b>4</b><p>Are your successor trustees <strong>still the people you'd choose today</strong>, and do they know where your documents are?</p></div>
+    <p class="callout">If you answered "no" or "not sure" to any of these, send me a copy of your deed. I'll show you what it says, for free.</p>
+  </div>
+</section>
+
+<section id="how">
+  <p class="eyebrow">How it works</p>
+  <h2>Four steps, and you'll always know where things stand</h2>
+  <ol class="steps">
+    <li><b>Free call</b><span>Fifteen minutes to see what you need and what it costs.</span></li>
+    <li><b>Simple contract</b><span>A written agreement with the flat fee. You can cancel within 24 hours for a full refund.</span></li>
+    <li><b>Your choices</b><span>You fill out one questionnaire, at home or with me. I turn your answers into documents.</span></li>
+    <li><b>Signing</b><span>We go through every page together, then you sign with a notary present.</span></li>
+  </ol>
+</section>
+
+<section>
+  <div class="never">
+    <p class="eyebrow">My promises</p>
+    <h2>What I will never do</h2>
+    <ul>
+      <li>Sell you insurance, an annuity or an investment, or pass your name to anyone who does</li>
+      <li>Name myself as a trustee or beneficiary in documents I prepare for you</li>
+      <li>Choose your trustees, beneficiaries or terms for you. Those decisions are yours.</li>
+      <li>Charge more than the price I quoted you in writing</li>
+      <li>Rush you to sign. Take the documents home and read them first.</li>
+      <li>Share your information. Your file stays confidential.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="compare">
+  <p class="eyebrow">What it costs</p>
+  <h2>Honest about cost, including when you should pay more</h2>
+  <p class="lead">Each option fits different people. If your situation is complicated (a blended family with conflict, a business, estate tax, or a family member with special needs), hire an attorney, and I'll give you names.</p>
+  <div class="tablewrap">
+  <table class="cmp">
+    <tr><th>Option</th><th>Typical cost for a couple</th><th>Who it fits</th></tr>
+    <tr><td>Estate-planning attorney</td><td class="n">$2,000–4,000+</td><td>Complex families, tax planning, anyone who wants legal advice</td></tr>
+    <tr class="me"><td><b>Scott Trust &amp; Document Services</b></td><td class="n">$1,250</td><td>People who know what they want and want it prepared correctly, explained in plain English, by someone local</td></tr>
+    <tr><td>Online do-it-yourself forms</td><td class="n">$300–600</td><td>Simple situations, if you're comfortable doing it all yourself</td></tr>
+  </table>
+  </div>
+  <p class="small" style="color:var(--muted);font-size:.85rem">Attorney and online price ranges are typical published ranges and vary.</p>
+</section>
+
+<section id="attorneys">
+  <p class="eyebrow">For attorneys</p>
+  <h2>Attorneys trust my work too</h2>
+  <p class="lead">I've prepared documents for attorney review for years. If your practice needs overflow help, I work as an independent contractor under your supervision, billed hourly, with a three-business-day turnaround.</p>
+  <div class="atty">
+    <div><h3>Trust funding</h3><p>Grant deeds into trust, PCORs, recording packets, and client funding letters, for Sacramento, Placer, Amador and surrounding counties.</p></div>
+    <div><h3>Drafting for your review</h3><p>Amendments, restatements, changes of domicile, beneficiary schedules, and health care directive write-ins for your review.</p></div>
+    <div><h3>Trustee notices</h3><p>Successor-trustee notice letters with acknowledgment pages, certified-mail packets, and client instruction sheets.</p></div>
+    <div><h3>Rates</h3><p><span style="font-family:var(--f-mono);color:var(--ink)">$55/hour</span>, invoiced twice a month, net 15. No fee-splitting and no referral fees.</p></div>
+  </div>
+</section>
+
+<section id="guides">
+  <p class="eyebrow">Free guides</p>
+  <h2>Plain-English answers, free</h2>
+  <p class="lead">You should understand your own documents. These are the questions families ask me most.</p>
+  <div class="articles">
+    <article>
+      <h3>Moving your house into your trust</h3>
+      <ol>
+        <li>Find your current recorded deed. The county recorder has a copy.</li>
+        <li>Sign a new grant deed from you to yourself as trustee.</li>
+        <li>File the county's change-of-ownership report with it.</li>
+        <li>Record it at the county recorder. A transfer into your own revocable trust usually has no transfer tax and doesn't reassess your property tax.</li>
+      </ol>
+    </article>
+    <article>
+      <h3>You've been named successor trustee. Now what?</h3>
+      <ul>
+        <li>Order several certified copies of the death certificate.</li>
+        <li>Find the original trust and any amendments.</li>
+        <li>California requires a written notice to heirs and beneficiaries within 60 days.</li>
+        <li>List every account and property before you move any money.</li>
+        <li>Keep trust money separate from your own, always.</li>
+      </ul>
+    </article>
+    <article>
+      <h3>When to update your trust</h3>
+      <ul>
+        <li>A marriage, divorce, birth or death in the family</li>
+        <li>A move to another state</li>
+        <li>A successor trustee who can no longer serve</li>
+        <li>A new house, or the old one sold</li>
+        <li>Changed wishes for charities, pets or health care</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about">
+    <svg width="96" height="96" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="var(--seal)" stroke-width="1.2"/><circle cx="20" cy="20" r="14.5" fill="none" stroke="var(--seal)" stroke-width=".6" stroke-dasharray="1.6 1.6"/><text x="20" y="25.5" text-anchor="middle" font-family="Young Serif, Georgia, serif" font-size="15" fill="var(--seal)">AS</text></svg>
+    <div>
+      <p class="eyebrow">About</p>
+      <h2 style="margin-top:6px">Hi, I'm Amanda.</h2>
+      <p style="margin-top:12px">For years I've prepared estate planning documents for families across Northern California: trusts, amendments, deeds, health care directives, and the letters that go out when a trustee changes. I've recorded deeds in Sacramento and Placer counties, rebuilt a 17-beneficiary charity schedule to the hundredth of a percent, and helped a family update their trust after a move out of state.</p>
+      <p>I started my own practice so families could get more of my time at a fair, flat price. I live in Amador County, I answer my own phone, and I'll go through every page with you in plain English.</p>
+      <p style="margin-top:16px;font-weight:600">Serving</p>
+      <div class="area" style="margin-top:8px"><span>Jackson</span><span>Sutter Creek</span><span>Ione</span><span>Pine Grove</span><span>Plymouth</span><span>Amador City</span><span>Calaveras County</span><span>El Dorado County</span><span>Sacramento, by video and mail</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <p class="eyebrow">Questions</p>
+  <h2>Straight answers</h2>
+  <div>
+    <details><summary>Are you an attorney?</summary><p>No. I'm a registered Legal Document Assistant. I prepare documents at your specific direction, and I can't give legal advice. When a question needs an attorney, I'll tell you and give you names of local attorneys.</p></details>
+    <details><summary>I already have a trust. Is my house in it?</summary><p>Check the owner on your current recorded deed. If it shows you personally rather than you as trustee of your trust, the house probably isn't in it. Send me a copy and I'll show you what it says.</p></details>
+    <details><summary>Do you sell insurance or annuities?</summary><p>No, and I never will. I only prepare documents, so my only interest is getting yours right.</p></details>
+    <details><summary>How do I know you're legitimate?</summary><p>Look me up. My registration is on file with the Amador County Clerk, 810 Court Street, Jackson, (209) 223-6468. My registration number and expiration date are at the bottom of this page and on every document and receipt I give you.</p></details>
+    <details><summary>What happens to my documents and information?</summary><p>You keep the originals. I keep a secure copy as the law requires, so I can help if you lose something, and I never share your information.</p></details>
+    <details><summary>How long does it take?</summary><p>A deed takes about a week. A full trust package usually takes two to three weeks, mostly depending on how fast you return the questionnaire.</p></details>
+    <details><summary>Can you come to me?</summary><p>Yes. I meet clients at home throughout Amador County, and by video or mail elsewhere in California.</p></details>
+    <details><summary>What if I change my mind after signing the contract?</summary><p>You can cancel within 24 hours for a full refund. After that, you pay only for work already done with your written OK.</p></details>
+  </div>
+</section>
+
+<section id="contact">
+  <p class="eyebrow">Contact</p>
+  <h2>Start with a free 15-minute call</h2>
+  <p class="lead">No pressure and no sales pitch. Tell me what you have and what you're worried about, and I'll tell you honestly whether I can help, what it costs, or who you should call instead.</p>
+  <div class="contact">
+    <div><span class="k">Call or text</span><span class="v">[Google Voice number]</span></div>
+    <div><span class="k">Email</span><span class="v">[business Gmail]</span></div>
+    <div><span class="k">Hours</span><span class="v">[Evenings &amp; Saturdays]</span></div>
+    <div><span class="k">Based in</span><span class="v">Jackson, CA</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="w">
+    <p><b>I am not an attorney. I can only provide self help services at your specific direction.</b></p>
+    <p>Amanda Scott, Legal Document Assistant · Registration No. [______] · County of Amador · Expires [date] · [Business address] · [Phone]</p>
+    <p>Information on this site is general and isn't legal advice. © Scott Trust &amp; Document Services</p>
+  </div>
+</footer>
+</body>
+</html>
